@@ -32,7 +32,8 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  "POST /signup":"AuthController.signup"
+  "POST /signup":"AuthController.signup",
+  "POST /Login":"AuthController.Login"
 
 
   /***************************************************************************
