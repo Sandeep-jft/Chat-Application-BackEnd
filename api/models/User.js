@@ -1,15 +1,15 @@
 module.exports={
     attributes:{
         username:{
-            type:String,
+            type:"string",
             required:true
         },
         email:{
-            type:String,
+            type:"string",
             required:true
         },
         password:{
-            type:String,
+            type:"string",
             required:true
         }
     }
