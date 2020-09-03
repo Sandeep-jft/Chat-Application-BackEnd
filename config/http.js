@@ -80,7 +80,7 @@ module.exports.http = {
   ***************************************************************************/
   
   
-  bodyParser: require('skipper')({strict: true,maxTimeToBuffer:100000})
+  //bodyParser: require('skipper')({strict: true,maxTimeToBuffer:100000})
   
   },
   
@@ -94,5 +94,5 @@ module.exports.http = {
   
   ***************************************************************************/
   
-  cache: 31557600000
+  //cache: 31557600000
   };
