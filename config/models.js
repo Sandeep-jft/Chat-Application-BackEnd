@@ -9,15 +9,23 @@
  * http://sailsjs.org/#!/documentation/concepts/ORM
  */
 
+const uuid = require('uuid')
+
 module.exports.models = {
 
-  /***************************************************************************
-  *                                                                          *
-  * Your app's default connection. i.e. the name of one of your app's        *
-  * connections (see `config/connections.js`)                                *
-  *                                                                          *
-  ***************************************************************************/
-  // connection: 'localDiskDb',
+  connection: 'Mysql',
+  attributes: {
+    id:{
+      type: 'string',
+      primaryKey: true,
+      //index: true,
+      unique: true,
+      uuidv4: true,
+      defaultsTo: function () {
+        return uuid.v4();
+      },
+    },
+  },
 
   /***************************************************************************
   *                                                                          *
@@ -27,6 +35,6 @@ module.exports.models = {
   * See http://sailsjs.org/#!/documentation/concepts/ORM/model-settings.html  *
   *                                                                          *
   ***************************************************************************/
-  // migrate: 'alter'
+  migrate: 'alter'
 
 };
